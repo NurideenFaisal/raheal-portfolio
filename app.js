@@ -20,17 +20,57 @@
 (function () {
   'use strict';
 
+  /* ---- Apply SITE config (from config.js) to CSS custom properties ---- */
+  var cfg   = (typeof SITE !== 'undefined') ? SITE : {};
+  var root  = document.documentElement.style;
+
+  // Card blur & overlay
+  var cards = cfg.cards || {};
+  if (cards.blur        != null) root.setProperty('--card-blur', cards.blur + 'px');
+  if (cards.overlayColor)        root.setProperty('--card-rgb',  cards.overlayColor);
+  if (cards.overlayTop  != null) root.setProperty('--card-ot',   cards.overlayTop);
+  if (cards.overlayMid  != null) root.setProperty('--card-om',   cards.overlayMid);
+  if (cards.overlayBot  != null) root.setProperty('--card-ob',   cards.overlayBot);
+
+  // Colour overrides
+  Object.keys(cfg.colors || {}).forEach(function (k) {
+    root.setProperty('--' + k, cfg.colors[k]);
+  });
+
+  // Optional blended page background image
+  var bgCfg = cfg.bg || {};
+  if (bgCfg.image) {
+    var bgEl = document.createElement('div');
+    bgEl.id  = 'site-bg';
+    bgEl.style.cssText =
+      'position:fixed;inset:0;z-index:0;pointer-events:none;' +
+      'background:url(' + bgCfg.image + ') center/cover no-repeat;' +
+      'opacity:'        + (bgCfg.opacity != null ? bgCfg.opacity : 0.08) + ';' +
+      'mix-blend-mode:' + (bgCfg.blend || 'multiply') + ';';
+    document.body.insertBefore(bgEl, document.body.firstChild);
+  }
+
   /* ---- Auto-set copyright year in footer ---- */
   var yr = document.getElementById('yr');
   if (yr) yr.textContent = new Date().getFullYear();
 
-  /* ---- Nav: add frosted-glass background when user scrolls down ---- */
-  var nav = document.getElementById('nav');
+  /* ---- Nav: frosted-glass on scroll + back-to-top button visibility ---- */
+  var nav     = document.getElementById('nav');
+  var backTop = document.getElementById('back-top');
+
   function onScroll() {
-    nav.classList.toggle('scrolled', window.scrollY > 24);
+    var y = window.scrollY;
+    nav.classList.toggle('scrolled', y > 24);
+    if (backTop) backTop.classList.toggle('visible', y > 500);
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
+
+  if (backTop) {
+    backTop.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 
   /* ---- Mobile hamburger menu ---- */
   var burger = document.getElementById('burger');
@@ -120,37 +160,8 @@
     });
   }
 
-  /* ====================================================================
-     TOOLS LIST
-     Add, remove, or rename entries here to update the Tools section.
-
-     file: SVG filename in assets/logos/ (no extension), or null for initials.
-     c:    Hex colour used when there is no logo file.
-  ==================================================================== */
-  var tools = [
-    { n: 'Notion',           file: 'notion',          c: '#211D17' },
-    { n: 'Trello',           file: 'trello',          c: '#1868DB' },
-    { n: 'Calendly',         file: 'calendly',        c: '#006BFF' },
-    { n: 'Zoom',             file: 'zoom',            c: '#0B5CFF' },
-    { n: 'Google Workspace', file: 'googleworkspace', c: '#1A73E8' },
-    { n: 'Metricool',        file: null,              c: '#1E4A3F' },
-    { n: 'AWeber',           file: null,              c: '#211D17' },
-    { n: 'Mailchimp',        file: 'mailchimp',       c: '#211D17' },
-    { n: 'MS Office',        file: null,              c: '#D83B01' },
-    { n: 'Buffer',           file: 'buffer',          c: '#231F20' },
-    { n: 'Meta Business',    file: 'meta',            c: '#0467DF' },
-    { n: 'Canva',            file: 'canva',           c: '#0A9DA4' },
-    { n: 'HubSpot',          file: 'hubspot',         c: '#FF5C35' },
-    { n: 'Zapier',           file: 'zapier',          c: '#FF4F00' },
-    { n: 'Airtable',         file: 'airtable',        c: '#2D6FE0' },
-    { n: 'Slack',            file: 'slack',           c: '#4A154B' },
-    { n: 'Asana',            file: 'asana',           c: '#E8517B' },
-    { n: 'Grammarly',        file: 'grammarly',       c: '#027E6F' },
-    { n: 'ChatGPT',          file: 'chatgpt',         c: '#211D17' },
-    { n: 'Gemini',           file: 'gemini',          c: '#4C6EF5' },
-    { n: 'Google Meet',      file: 'googlemeet',      c: '#00897B' },
-    { n: 'Outlook',          file: null,              c: '#0078D4' }
-  ];
+  /* ---- Tools list — edit entries in config.js, not here ---- */
+  var tools = (cfg.tools && cfg.tools.length) ? cfg.tools : [];
 
   function initials(name) {
     return name.split(' ').map(function (w) { return w[0]; }).join('').slice(0, 2).toUpperCase();
