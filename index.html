@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- =====================================================================
+       PAGE TITLE & SEO
+       Change the text between <title>...</title> to update the browser tab.
+       Change the content="" in <meta name="description"> for search engines.
+  ====================================================================== -->
+  <title>Raheal Akuta — Virtual Assistant & Administrative Support</title>
+  <meta name="description" content="Raheal Akuta — dependable Virtual Assistant helping busy entrepreneurs and small businesses stay organised, efficient, and stress-free.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- =====================================================================
+     NAVIGATION BAR
+     To change the nav links, edit the <a href="#..."> text below.
+     The href value (#about, #services etc.) must match a section id="..." further down.
+====================================================================== -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+
+    <!-- Logo / Brand name in the top-left corner -->
+    <a href="#top" class="brand">
+      <span class="mark">R</span>
+      <span>
+        <!-- EDIT: Your name -->
+        <span class="bname">Raheal Akuta</span><br>
+        <!-- EDIT: Your job title (short) -->
+        <span class="brole">Virtual Assistant</span>
+      </span>
+    </a>
+
+    <!-- Desktop navigation links -->
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Work</a>
+      <a href="#tools">Tools</a>
+      <a href="#testimonials">Praise</a>
+    </nav>
+
+    <div class="nav-cta">
+      <!-- EDIT: The main button text & link -->
+      <a href="#contact" class="btn btn-primary">Let's work together <span class="arr">→</span></a>
+      <button class="burger" id="burger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile slide-down menu (same links as desktop nav above) -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#skills">Skills</a>
+  <a href="#work">Work</a>
+  <a href="#tools">Tools</a>
+  <a href="#testimonials">Praise</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<span id="top"></span>
+
+<!-- =====================================================================
+     HERO SECTION  (the big opening section)
+     EDIT: headline, sub-text, role chips, and the two buttons.
+     The photo on the right comes from  assets/raheal.jpeg
+     — replace that file to change the photo (keep the same filename).
+====================================================================== -->
+<section class="hero wrap">
+  <div class="hero-mark" aria-hidden="true">R</div>
+  <div class="hero-grid">
+    <div class="hero-copy">
+
+      <!-- EDIT: Small italic greeting above your name -->
+      <p class="hero-hi reveal">Hello, I'm</p>
+
+      <!-- EDIT: Your full name — the last name gets the green italic style -->
+      <h1 class="reveal d1">Raheal <span class="last">Akuta</span></h1>
+
+      <!-- EDIT: Role chips — add, remove or rename these little tags -->
+      <div class="hero-roles reveal d2">
+        <span class="role-chip">Virtual Assistant</span>
+        <span class="role-chip">Administrative Support</span>
+        <span class="role-chip">Productivity &amp; Operations</span>
+      </div>
+
+      <!-- EDIT: One or two sentences about what you do -->
+      <p class="hero-lead reveal d2">Administrative tasks eating the time you'd rather spend growing your business? <strong>I make things easier.</strong> I help busy entrepreneurs and small teams stay organised, efficient, and relaxed — handling the details so you can focus on what truly matters.</p>
+
+      <div class="hero-actions reveal d3">
+        <!-- EDIT: Primary button text & link -->
+        <a href="#contact" class="btn btn-primary">Get in touch <span class="arr">→</span></a>
+        <!-- EDIT: Secondary button text & link -->
+        <a href="#about" class="btn btn-ghost">About me</a>
+        <!-- EDIT: Availability status text -->
+        <span class="hero-avail"><span class="dot"></span> Available for new clients</span>
+      </div>
+    </div>
+
+    <!-- Hero photo — replace assets/raheal.jpeg to change the image -->
+    <div class="hero-photo reveal d2">
+      <div class="blob"></div>
+      <div class="frame">
+        <img src="assets/raheal.jpeg" alt="Raheal Akuta, Virtual Assistant">
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       STATS STRIP  (the 4 numbers under the hero)
+       EDIT: data-count="NUMBER" sets the animated target number.
+       EDIT: data-suffix="+" adds a symbol after the number.
+       EDIT: The <div class="l"> text is the label under each number.
+  ====================================================================== -->
+  <div class="statstrip">
+    <div class="stat reveal">
+      <div class="n" data-count="2680" data-suffix="+">0</div>
+      <!-- EDIT: Stat label -->
+      <div class="l">Emails sorted to Inbox Zero</div>
+    </div>
+    <div class="stat reveal d1">
+      <div class="n" data-count="20" data-suffix="+">0</div>
+      <div class="l">Tools &amp; platforms mastered</div>
+    </div>
+    <div class="stat reveal d2">
+      <div class="n" data-count="8" data-suffix="">0</div>
+      <div class="l">Core service areas covered</div>
+    </div>
+    <div class="stat reveal d3">
+      <!-- This stat has no animation — just static text -->
+      <div class="n">100<span>%</span></div>
+      <div class="l">Remote, reliable &amp; on schedule</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     ABOUT SECTION
+     EDIT: The quote card on the left, and the bio paragraphs on the right.
+     EDIT: The strength chips at the bottom.
+====================================================================== -->
+<section class="section about" id="about">
+  <div class="wrap about-grid">
+
+    <!-- Left side: quote card -->
+    <aside class="about-aside reveal">
+      <span class="eyebrow">About me</span>
+      <div class="about-card" style="margin-top:22px">
+        <!-- EDIT: Your personal quote -->
+        <p class="quote">"I keep the gears turning quietly behind the scenes — so your business runs smoothly and you can breathe."</p>
+        <p class="sig">— Raheal Akuta</p>
+        <div class="deco"></div>
+      </div>
+    </aside>
+
+    <!-- Right side: bio text -->
+    <div class="about-body reveal d1">
+      <!-- EDIT: Bio paragraphs — you can have as many <p> tags as you like -->
+      <p>I'm <strong>Raheal Akuta</strong>, a dependable Virtual Assistant skilled at supporting professionals with everything from administrative work and email management to scheduling, data entry, customer service, and organising workflows.</p>
+      <p>I help busy entrepreneurs and small businesses become more organised, efficient, and relaxed by providing structured virtual support and simplifying daily operations. Whether it's managing daily tasks, organising your schedule, handling client communications, or maintaining your systems, I ensure your business runs smoothly behind the scenes.</p>
+      <p>Let's work together to simplify your workload and boost your productivity — so you can focus on <strong>growth</strong>.</p>
+
+      <!-- EDIT: Core strengths — add or remove <span class="chip"> tags -->
+      <div class="strengths">
+        <h4>Core strengths</h4>
+        <div class="chips">
+          <span class="chip">Organisation</span>
+          <span class="chip">Clear communication</span>
+          <span class="chip">Attention to detail</span>
+          <span class="chip">Adaptability</span>
+          <span class="chip">Time management</span>
+          <span class="chip">Problem-solving</span>
+          <span class="chip">Proactive mindset</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     SERVICES SECTION
+     EDIT: Each service card has a number, icon, title, and description.
+     To add a new card: copy one <div class="svc ..."> block and paste it.
+     To remove a card: delete the whole <div class="svc ..."> block.
+     The SVG icons are inline — you can swap them on sites like heroicons.com
+====================================================================== -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">What I do</span>
+      <!-- EDIT: Section headline -->
+      <h2>Support that covers <em>every</em> corner of your day.</h2>
+      <!-- EDIT: Section sub-text -->
+      <p>From the inbox to operations, here's how I take work off your plate.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- Service 01 -->
+      <div class="svc reveal">
+        <span class="num">01</span>
+        <div class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 8h18M8 4v4"/></svg>
+        </div>
+        <!-- EDIT: Service title & description -->
+        <h3>Administrative Support</h3>
+        <p>Calendar &amp; email management, data entry, research, scheduling, file organisation, and travel planning.</p>
+      </div>
+
+      <!-- Service 02 -->
+      <div class="svc reveal d1">
+        <span class="num">02</span>
+        <div class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>
+        </div>
+        <h3>Social Media Management</h3>
+        <p>Content planning, scheduling, audience engagement, basic graphics, and performance monitoring.</p>
+      </div>
+
+      <!-- Service 03 -->
+      <div class="svc reveal d2">
+        <span class="num">03</span>
+        <div class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+        </div>
+        <h3>Project Management</h3>
+        <p>Organising tasks, tracking milestones, managing deadlines, and supporting smooth team collaboration.</p>
+      </div>
+
+      <!-- Service 04 -->
+      <div class="svc reveal d3">
+        <span class="num">04</span>
+        <div class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>Customer Support</h3>
+        <p>Managing communications, resolving inquiries, and providing efficient support that lifts client satisfaction.</p>
+      </div>
+
+      <!-- Service 05 -->
+      <div class="svc reveal">
+        <span class="num">05</span>
+        <div class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+        </div>
+        <h3>Content &amp; Writing Support</h3>
+        <p>Drafting, proofreading, formatting, and organising content so your message lands clearly and on-brand.</p>
+      </div>
+
+      <!-- Service 06 -->
+      <div class="svc reveal d1">
+        <span class="num">06</span>
+        <div class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 3v18h18"/><path d="M7 14l3-4 3 3 4-6"/></svg>
+        </div>
+        <h3>Business &amp; Operations</h3>
+        <p>Lead generation, market &amp; competitor research, and actionable insights that support business growth.</p>
+      </div>
+
+      <!-- Service 07 -->
+      <div class="svc reveal d2">
+        <span class="num">07</span>
+        <div class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="6.5" cy="14.5" r="2.5"/><circle cx="17" cy="17" r="2.5"/><path d="M11 8l-3 4M15.5 8.5L16 14.5"/></svg>
+        </div>
+        <h3>Basic Creative Tasks</h3>
+        <p>Simple graphics, presentation polish, and light design work in Canva to keep things looking sharp.</p>
+      </div>
+
+      <!-- Service 08 -->
+      <div class="svc reveal d3">
+        <span class="num">08</span>
+        <div class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l2.5 5 5.5.8-4 3.9.9 5.5L12 20l-4.9 2.6.9-5.5-4-3.9 5.5-.8z"/></svg>
+        </div>
+        <h3>CRM &amp; Automation</h3>
+        <p>HubSpot, Zapier &amp; more — organising data, automating tasks, and tightening workflow efficiency.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     SKILLS SECTION  (dark green background)
+     EDIT: Each skill block has a number, title, and description.
+====================================================================== -->
+<section class="section skills" id="skills">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Where I'm strong</span>
+      <h2>Skills that turn chaos into <em>calm systems</em>.</h2>
+    </div>
+    <div class="skills-grid">
+
+      <!-- Skill 01 -->
+      <div class="skill reveal">
+        <div class="k">01</div>
+        <!-- EDIT: Skill title & description -->
+        <h3>Administrative Support</h3>
+        <p>Calendar &amp; email management, data entry &amp; research, meeting scheduling and support, file &amp; document organisation, and travel planning &amp; itinerary creation.</p>
+      </div>
+
+      <!-- Skill 02 -->
+      <div class="skill reveal d1">
+        <div class="k">02</div>
+        <h3>Social Media Support</h3>
+        <p>Content planning, scheduling, audience engagement, basic graphic design, and performance monitoring to strengthen your online presence.</p>
+      </div>
+
+      <!-- Skill 03 -->
+      <div class="skill reveal">
+        <div class="k">03</div>
+        <h3>Lead Generation &amp; Research</h3>
+        <p>Identifying potential clients, conducting market &amp; competitor research, and compiling actionable insights that support business growth.</p>
+      </div>
+
+      <!-- Skill 04 -->
+      <div class="skill reveal d1">
+        <div class="k">04</div>
+        <h3>Project &amp; Workflow Coordination</h3>
+        <p>Organising tasks, tracking progress, managing deadlines, and supporting smooth team collaboration to hit goals on time.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     WHY I STAND OUT  (6 reason cards in a grid)
+     EDIT: Each card has a number, title, and description.
+     The terracotta (orange) card is the featured one — it's the 4th item.
+====================================================================== -->
+<section class="section" id="why">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why I stand out</span>
+      <h2>A reliable pair of hands you can <em>actually</em> trust.</h2>
+    </div>
+    <div class="why-grid">
+
+      <div class="why-item reveal">
+        <div class="wn">01</div>
+        <h3>Dependable Business Support</h3>
+        <p>Reliable assistance that keeps daily operations organised and running smoothly.</p>
+      </div>
+
+      <div class="why-item reveal d1">
+        <div class="wn">02</div>
+        <h3>Efficiency-Focused Solutions</h3>
+        <p>I improve workflows and build organised processes that reduce bottlenecks and increase productivity.</p>
+      </div>
+
+      <div class="why-item reveal d2">
+        <div class="wn">03</div>
+        <h3>Clear &amp; Consistent Collaboration</h3>
+        <p>Open communication, timely updates, and tasks completed accurately and on schedule.</p>
+      </div>
+
+      <!-- Featured (highlighted) card — has class "feature" for the terracotta colour -->
+      <div class="why-item feature reveal">
+        <div class="wn">04</div>
+        <h3>Broad Administrative Expertise</h3>
+        <p>From inbox and calendar management to social media coordination and CRM maintenance, I support multiple business functions.</p>
+      </div>
+
+      <div class="why-item reveal d1">
+        <div class="wn">05</div>
+        <h3>Quick to Adapt</h3>
+        <p>I learn new tools, systems, and processes efficiently, integrating seamlessly into different work environments.</p>
+      </div>
+
+      <div class="why-item reveal d2">
+        <div class="wn">06</div>
+        <h3>Proactive by Default</h3>
+        <p>I anticipate needs and head off problems before they reach your desk — so fewer things land on your plate.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     WORK SAMPLES  (portfolio / project highlights)
+     Filter buttons at the top let visitors filter by category.
+     Each <article class="case"> card has:
+       data-cat="admin|ops|marketing|support"  — which filter it belongs to
+       A background image URL (Unsplash links — change to your own images)
+       A <span class="tag">  — the category label shown on the card
+       A title <h3>, description <p>, and tools list.
+
+     To change a background photo:
+       Find  background-image:url('https://images.unsplash.com/...')
+       Replace the URL with any image URL, or a local path like 'assets/my-photo.jpg'
+====================================================================== -->
+<section class="section" id="work">
+  <div class="wrap">
+    <div class="section-head reveal" style="max-width:760px">
+      <span class="eyebrow">Project highlights</span>
+      <h2>Take a look at <em>my work</em>.</h2>
+      <p>Real casework across administration, operations, marketing, and support — with the systems and outcomes behind each.</p>
+    </div>
+
+    <!-- Filter buttons -->
+    <div class="filters reveal d1" id="filters">
+      <button class="filter active" data-f="all">All work</button>
+      <button class="filter" data-f="admin">Administrative</button>
+      <button class="filter" data-f="ops">Operations</button>
+      <button class="filter" data-f="marketing">Marketing</button>
+      <button class="filter" data-f="support">Support</button>
+    </div>
+
+    <div class="work-grid" id="workGrid">
+
+      <!-- Case 01: Calendar Management -->
+      <article class="case reveal" data-cat="admin">
+        <div class="casebg" style="background-image:url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=900&q=72&auto=format&fit=crop')"></div>
+        <span class="tag">Admin</span>
+        <div class="case-body">
+          <h3>Calendar Management</h3>
+          <p>Organised and scheduled meetings, appointments, and deadlines in Google Calendar, and coordinated bookings via Calendly for seamless, well-managed time.</p>
+          <div class="tools-mini"><span>Google Calendar</span><span>Calendly</span></div>
+        </div>
+      </article>
+
+      <!-- Case 02: Email Management -->
+      <article class="case reveal d1" data-cat="admin">
+        <div class="casebg" style="background-image:url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=900&q=72&auto=format&fit=crop')"></div>
+        <span class="tag">Admin</span>
+        <div class="case-body">
+          <h3>Email Management — Inbox Zero</h3>
+          <p>Built labels, categorised &amp; archived messages, and set up automated filters for a clean, well-structured inbox.</p>
+          <!-- Before/after comparison block -->
+          <div class="ba">
+            <div class="before"><div class="bt">Before</div><div class="bn">2,680</div></div>
+            <div class="after"><div class="bt">After</div><div class="bn">Inbox 0</div></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Case 03: Travel Management -->
+      <article class="case reveal d2" data-cat="admin">
+        <div class="casebg" style="background-image:url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=900&q=72&auto=format&fit=crop')"></div>
+        <span class="tag">Admin</span>
+        <div class="case-body">
+          <h3>Travel Management</h3>
+          <p>Built a comprehensive 4-day travel itinerary &amp; pack — flights, accommodation, daily plans, transport, and restaurant picks — for a stress-free trip.</p>
+          <div class="metricrow"><span class="big">4-day</span><span class="ml">end-to-end<br>itinerary &amp; pack</span></div>
+        </div>
+      </article>
+
+      <!-- Case 04: Research & Data Entry -->
+      <article class="case reveal" data-cat="ops">
+        <div class="casebg" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=72&auto=format&fit=crop')"></div>
+        <span class="tag">Operations</span>
+        <div class="case-body">
+          <h3>Research &amp; Data Entry</h3>
+          <p>Performed research on Airbnb companies across the US &amp; UK and compiled the findings into a clean, well-structured Google Sheets document.</p>
+          <div class="tools-mini"><span>Google Sheets</span><span>Market research</span></div>
+        </div>
+      </article>
+
+      <!-- Case 05: Lead Generation -->
+      <article class="case reveal d1" data-cat="ops">
+        <div class="casebg" style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&q=72&auto=format&fit=crop')"></div>
+        <span class="tag">Operations</span>
+        <div class="case-body">
+          <h3>Lead Generation &amp; Outreach</h3>
+          <p>Researched and compiled qualified leads, imported contact data into HubSpot CRM, and built a centralised database for efficient client communication.</p>
+          <div class="tools-mini"><span>HubSpot</span><span>Lead research</span></div>
+        </div>
+      </article>
+
+      <!-- Case 06: Project Management -->
+      <article class="case reveal d2" data-cat="ops">
+        <div class="casebg" style="background-image:url('https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=900&q=72&auto=format&fit=crop')"></div>
+        <span class="tag">Operations</span>
+        <div class="case-body">
+          <h3>Project Management</h3>
+          <p>Used Trello and Airtable to manage workflows, track milestones, monitor performance, and ensure timely delivery of every deliverable.</p>
+          <div class="tools-mini"><span>Trello</span><span>Airtable</span></div>
+        </div>
+      </article>
+
+      <!-- Case 07: Document Organisation -->
+      <article class="case reveal" data-cat="admin">
+        <div class="casebg" style="background-image:url('https://images.unsplash.com/photo-1542435503-956c469947f6?w=900&q=72&auto=format&fit=crop')"></div>
+        <span class="tag">Admin</span>
+        <div class="case-body">
+          <h3>Document Organisation</h3>
+          <p>Implemented a structured file system — main folders, subfolders, and colour-coding — for an orderly, accessible Google Drive.</p>
+          <div class="tools-mini"><span>Google Drive</span><span>Colour-coding</span></div>
+        </div>
+      </article>
+
+      <!-- Case 08: Meeting Support -->
+      <article class="case reveal d1" data-cat="admin">
+        <div class="casebg" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=900&q=72&auto=format&fit=crop')"></div>
+        <span class="tag">Admin</span>
+        <div class="case-body">
+          <h3>Meeting Support</h3>
+          <p>Developed structured agendas and accurately documented meeting minutes in Google Docs for clear communication and proper record-keeping.</p>
+          <div class="tools-mini"><span>Google Docs</span><span>Agendas &amp; minutes</span></div>
+        </div>
+      </article>
+
+      <!-- Case 09: Email Marketing -->
+      <article class="case reveal d2" data-cat="marketing">
+        <div class="casebg" style="background-image:url('https://images.unsplash.com/photo-1563986768609-322da13575f3?w=900&q=72&auto=format&fit=crop')"></div>
+        <span class="tag">Marketing</span>
+        <div class="case-body">
+          <h3>Email Marketing</h3>
+          <p>Ran campaigns through AWeber, Mailchimp &amp; Constant Contact — newsletters, subscriber databases, list segmentation, and performance tracking.</p>
+          <div class="tools-mini"><span>AWeber</span><span>Mailchimp</span><span>Constant Contact</span></div>
+        </div>
+      </article>
+
+      <!-- Case 10: Customer Support -->
+      <article class="case reveal" data-cat="support">
+        <div class="casebg" style="background-image:url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=900&q=72&auto=format&fit=crop')"></div>
+        <span class="tag">Support</span>
+        <div class="case-body">
+          <h3>Customer Support</h3>
+          <p>Managed customer communications, resolved inquiries, and delivered efficient support that enhanced overall client satisfaction.</p>
+          <div class="tools-mini"><span>Help desk</span><span>Comms</span></div>
+        </div>
+      </article>
+
+      <!-- Case 11: Social Media Management -->
+      <article class="case reveal d1" data-cat="marketing">
+        <div class="casebg" style="background-image:url('https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=900&q=72&auto=format&fit=crop')"></div>
+        <span class="tag">Marketing</span>
+        <div class="case-body">
+          <h3>Social Media Management</h3>
+          <p>Planned &amp; scheduled content, created basic graphics, engaged followers, and analysed performance to grow brand presence.</p>
+          <div class="tools-mini"><span>Notion</span><span>Metricool</span><span>Canva</span></div>
+        </div>
+      </article>
+
+      <!-- Case 12: CRM & Automation -->
+      <article class="case reveal d2" data-cat="ops">
+        <div class="casebg" style="background-image:url('https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=900&q=72&auto=format&fit=crop')"></div>
+        <span class="tag">Operations</span>
+        <div class="case-body">
+          <h3>CRM &amp; AI Automation</h3>
+          <p>Used HubSpot and Zapier to organise data, automate repetitive tasks, and enhance overall workflow efficiency.</p>
+          <div class="tools-mini"><span>HubSpot</span><span>Zapier</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     TOOLS / PLATFORM EXPERTISE
+     The tool cards are generated automatically from the list in app.js.
+     To add, remove or rename tools → open app.js and edit the "tools" array.
+     SVG logo files live in assets/logos/ — the name must match the "file" field.
+====================================================================== -->
+<section class="section tools" id="tools">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Platform expertise</span>
+      <h2>The <em>toolkit</em> I bring to your business.</h2>
+      <p>Proficient across productivity, communication, CRM, marketing, and creative platforms — ready to plug into your stack from day one.</p>
+    </div>
+
+    <!-- Tools are injected here by app.js -->
+    <div class="tools-grid" id="toolsGrid"></div>
+
+    <!-- Certification banner -->
+    <div class="cert-band reveal">
+      <div class="cico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="color:#F5EFE4;width:24px;height:24px">
+          <circle cx="12" cy="9" r="6"/>
+          <path d="M9 14l-2 7 5-3 5 3-2-7"/>
+        </svg>
+      </div>
+      <div>
+        <!-- EDIT: Certification title & description -->
+        <h3>Certified Virtual Assistant</h3>
+        <p>Formally trained in virtual assistance, administrative support, and productivity systems.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     TESTIMONIALS  (client praise)
+     EDIT: Each <div class="tst"> is one testimonial.
+     Change the quote text, the name, and the role/company.
+     The avatar circle shows the first letter of the name automatically.
+     Replace "Illustrative testimonials" note below once you have real quotes.
+====================================================================== -->
+<section class="section" id="testimonials">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Kind words</span>
+      <h2>What working with me <em>feels like</em>.</h2>
+    </div>
+    <div class="tst-grid">
+
+      <!-- Testimonial 01 -->
+      <div class="tst reveal">
+        <div class="stars">★★★★★</div>
+        <!-- EDIT: Quote text -->
+        <p class="q">"Raheal took my overflowing inbox from chaos to Inbox Zero in days. She's organised, proactive, and genuinely makes my week lighter."</p>
+        <div class="who">
+          <!-- EDIT: Change "A" to the first letter of the client's name -->
+          <span class="av">A</span>
+          <span>
+            <!-- EDIT: Client name and role -->
+            <span class="nm">Amara O.</span><br>
+            <span class="rl">Founder, Boutique Consultancy</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Testimonial 02 -->
+      <div class="tst reveal d1">
+        <div class="stars">★★★★★</div>
+        <p class="q">"Reliable, detail-obsessed, and quick to learn our tools. Our scheduling and CRM have never been this clean. I trust her with the details."</p>
+        <div class="who">
+          <span class="av">D</span>
+          <span>
+            <span class="nm">Daniel K.</span><br>
+            <span class="rl">Operations Lead, E-commerce</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Testimonial 03 -->
+      <div class="tst reveal d2">
+        <div class="stars">★★★★★</div>
+        <p class="q">"The travel itinerary she built was flawless — every detail handled. Communication is clear and updates always arrive on time."</p>
+        <div class="who">
+          <span class="av">S</span>
+          <span>
+            <span class="nm">Sofia M.</span><br>
+            <span class="rl">Small Business Owner</span>
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- EDIT: Remove this line once you replace the testimonials with real ones -->
+    <p class="tst-note reveal">Placeholder testimonials — swap these for your real client quotes when ready.</p>
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     CONTACT SECTION  (dark green background)
+     EDIT: Email address, phone number, LinkedIn URL and display text below.
+     The Upwork button link is currently "#" — replace with your Upwork profile URL.
+====================================================================== -->
+<section class="section contact" id="contact">
+  <div class="wrap contact-grid">
+
+    <div class="reveal">
+      <span class="eyebrow">Let's work together</span>
+      <h2 style="margin-top:18px">Ready to <em>simplify</em> your workload?</h2>
+      <!-- EDIT: Contact section intro text -->
+      <p class="lead">Let's free up your time and boost your productivity. Reach out and let's talk about how I can support your business behind the scenes.</p>
+      <div class="contact-cta">
+        <!-- EDIT: Replace the email address in href="mailto:..." and the button text -->
+        <a href="mailto:rahealakuta@gmail.com" class="btn btn-clay">Send me an email <span class="arr">→</span></a>
+        <!-- EDIT: Replace # with your actual Upwork profile URL -->
+        <a href="#" class="btn btn-light">View my Upwork profile</a>
+      </div>
+    </div>
+
+    <!-- Contact details card -->
+    <div class="contact-card reveal d1">
+
+      <!-- Email -->
+      <a class="cline" href="mailto:rahealakuta@gmail.com">
+        <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+        <span>
+          <span class="clbl">Email</span>
+          <!-- EDIT: Your email address -->
+          <span class="cval">rahealakuta@gmail.com</span>
+        </span>
+        <span class="arr2">→</span>
+      </a>
+
+      <!-- Phone -->
+      <!-- EDIT: Replace the phone number in href="tel:..." and the display text -->
+      <a class="cline" href="tel:+233551019705">
+        <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+        <span>
+          <span class="clbl">Phone / WhatsApp</span>
+          <span class="cval">+233 55 101 9705</span>
+        </span>
+        <span class="arr2">→</span>
+      </a>
+
+      <!-- LinkedIn -->
+      <!-- EDIT: Replace the LinkedIn URL and display name -->
+      <a class="cline" href="https://www.linkedin.com/in/raheal-akuta-awinpoka-94b977219/" target="_blank" rel="noopener">
+        <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 0 1 4 0v4M16 17v-3"/></svg></span>
+        <span>
+          <span class="clbl">LinkedIn</span>
+          <span class="cval">raheal-akuta-awinpoka</span>
+        </span>
+        <span class="arr2">→</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =====================================================================
+     FOOTER
+     EDIT: The name and tagline shown at the bottom of the page.
+====================================================================== -->
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <div class="fbrand">
+      <span class="mark" style="color:#F5EFE4;font-weight:600">R</span>
+      <!-- EDIT: Your name in the footer -->
+      Raheal Akuta
+    </div>
+    <div>Virtual Assistant · Administrative Support · Operations</div>
+    <!-- Year is set automatically by app.js — no need to change this -->
+    <div>© <span id="yr"></span> Raheal Akuta. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
